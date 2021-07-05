@@ -1,0 +1,12 @@
+version: "3"
+services:
+  inventory-service:
+    image: inventory-service
+    ports:
+      - "8084:8084"
+    networks:
+      - fastinventory-network
+    restart: on-failure
+
+networks:
+  fastinventory-network:
